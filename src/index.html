@@ -1,0 +1,47 @@
+<!doctype html>
+<!--[if lt IE 7]>      <template class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <template class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <template class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TODO app view</title>
+
+
+
+  <script src="CKEditor/ckeditor.js"></script>
+</head>
+
+<body>
+ <div ui-view></div>
+
+
+ <div class="container">
+  <center>
+    <form>
+      <textarea name="ckEditorArea" id="ckEditorArea" rows="10" cols="50">
+
+      </textarea>
+      <script>
+      CKEDITOR.config.contentsCss = ['lib/bootstrap/dist/css/bootstrap.css'];
+      CKEDITOR.replace( 'ckEditorArea',{
+
+        extraPlugins : 'gridPlugin,magicline',
+        toolbar :
+        [
+          [ 'Bold', 'Italic' ,'Underline','Strike','-','Paste'], 
+          ['NumberedList', 'BulletedList', 'Copy', 'Link', 'Unlink' ],
+          [ 'gridPlugin' ]
+        ]
+
+      } );
+      </script>
+    </form>
+  </center>
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "gridPlugin",
+  "version": "1.0.0",
+  "homepage": "https://github.com/radko26/ng-sirmaspa",
+  "authors": [
+    "Radoslav Petkov"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}
