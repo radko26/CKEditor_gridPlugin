@@ -28,7 +28,7 @@
 				var html = '<div class="container-fluid">';
 				var generate = "";
 				for(var i=0;i<sizes.length;i++){
-					generate+=('<div style="border:1px solid #778899;float:left;position:relative;background:#B0C4DE;text-align:center;height:30px;line-height: 30px;width:' + (colWidth[sizes[i]] - 1)+ 'px;' + ((i!=0)?'border-left:none':'') + ' "> ' + '</div>' );
+					generate+=('<div style="cursor:pointer;border:1px solid #778899;float:left;position:relative;background:#B0C4DE;text-align:center;height:30px;line-height: 30px;width:' + (colWidth[sizes[i]] - 1)+ 'px;' + ((i!=0)?'border-left:none':'') + ' "> ' + '</div>' );
 					injectTemplate["size"+(i+1)]=sizes[i];
 				}
 

@@ -27,8 +27,7 @@ if(program.dist){
 gulp.task('e2e',function(){
   gulp.src(["test/e2e/*.js"])
       .pipe(protractor({
-          configFile: "protractor.conf.js",
-          args: ['--baseUrl', 'http://127.0.0.1:8000']
+          configFile: "protractor.conf.js"
       })) 
       .on('error', function(e) { throw e })
 });
@@ -70,7 +69,7 @@ gulp.task('watch-mode', function() {
   indexWatcher = gulp.watch('src/index.html',['index']),
   cssWatcher = gulp.watch('src/theme/less/**/*.less', ['css']),
   imageWatcher = gulp.watch('src/theme/images/', ['image']),
-  testWatcher = gulp.watch('test/**/*.js', ['karma']),
+  testWatcher = gulp.watch('test/**/*.js', ['e2e']),
   ckeditorWatcher = gulp.watch('src/CKEditor/**/*.*', ['ckeditor']);
 
   function changeNotification(event) {
