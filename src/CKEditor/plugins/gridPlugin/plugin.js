@@ -1,5 +1,5 @@
 /**
-
+    This plugin adds various custom grids using twitter bootstrap grid system.
 
 **/
 CKEDITOR.plugins.add( 'gridPlugin', {
