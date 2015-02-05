@@ -2,12 +2,6 @@
 
 
 **/
-
-
-
-
-
-
 CKEDITOR.plugins.add( 'gridPlugin', {
     lang : 'en,bg',
     init: function( editor ) {
@@ -82,8 +76,11 @@ CKEDITOR.plugins.add( 'gridPlugin', {
 
         CKEDITOR.dialog.add( 'actionDialog', this.path + 'dialogs/actionDialog.js' );
 
-        editor.addCommand( 'openActionDialog', new CKEDITOR.dialogCommand( 'actionDialog' ) );
-
+        editor.addCommand( 'openActionDialog',
+            new CKEDITOR.dialogCommand( 'actionDialog',{
+                allowedContent: 'div[*];span[*]'
+            } 
+        ));
         editor.ui.addButton('gridPlugin',{
             title: editor.lang.gridPlugin.title,
             icon: this.path + 'icons/icon.png',

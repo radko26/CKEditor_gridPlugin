@@ -1,10 +1,10 @@
 describe('gridPlugin', function() {
 
   describe('index page', function(){
-  	var pluginIcon = element(by.css('.cke_button__gridplugin'));
   	browser.ignoreSynchronization = true;
     browser.driver.get('http://localhost:8081/public/');
 
+    var pluginIcon = element(by.css('.cke_button__gridplugin'));
 
     it('should open the dialog', function() {
       	pluginIcon.click().then(function(){
@@ -16,9 +16,14 @@ describe('gridPlugin', function() {
     	pluginIcon.click().then(function(){
       		var grid = element(by.css('.container-fluid > div'));
       		grid.click().then(function(){
-      			browser.driver.switchTo().frame(element(by.css('.cke_wysiwyg_frame'))).then(function(){
-      				var gridTemplate = element(by.css('.layout-column'));
-      			});
+      			var iframe = element(by.css('#cke_1_contents > iframe'));
+      			
+
+      			browser.driver.switchTo().frame(iframe);
+
+      				console.log("click");
+      				//var gridTemplate = element(by.css('.layout-column'));
+      			browser.driver.switchTo().defaultContent();
       		});
       	});
 

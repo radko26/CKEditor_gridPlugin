@@ -6,6 +6,6 @@ exports.config = {
   seleniumServerJar: gulpSelenium.path,
   chromeDriver: gulpSelenium.chromeDriverPath,
   capabilities: {
-    'browserName': 'firefox'
+    'browserName': 'phantomjs'
   }
 };

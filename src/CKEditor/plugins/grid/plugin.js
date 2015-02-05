@@ -9,8 +9,6 @@ CKEDITOR.plugins.add( 'grid', {
 					'<h2 class="simplebox-title">Title</h2>' +
 					'<div class="simplebox-content"><p>Content...</p></div>' +
 				'</div>',
-			button: 'Create a simple box',
-			icon:'images/icon.png',
 			upcast: function( element ) {
 				return element.name == 'div' && element.hasClass( 'simplebox' );
 			}
