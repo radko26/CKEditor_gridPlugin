@@ -16,14 +16,9 @@ describe('gridPlugin', function() {
     	pluginIcon.click().then(function(){
       		var grid = element(by.css('.container-fluid > div'));
       		grid.click().then(function(){
-      			var iframe = element(by.css('#cke_1_contents > iframe'));
-      			
-
-      			browser.driver.switchTo().frame(iframe);
-
-      				console.log("click");
-      				//var gridTemplate = element(by.css('.layout-column'));
-      			browser.driver.switchTo().defaultContent();
+      			browser.driver.switchTo().frame(0).then(function(){
+      				var gridTemplate = element(by.css('.layout-column'));
+      			});
       		});
       	});
 
