@@ -21,8 +21,8 @@ describe('gridPlugin', function() {
       			});
       		});
       	});
-
     });
+    
 
   });
 
