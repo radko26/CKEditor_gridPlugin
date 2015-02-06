@@ -15,7 +15,7 @@
 		}	
 
 		/**
-			Construction function that generates the small grid in the dialog and 
+			Construct function that generates the small grid in the dialog and 
 			adds the real grid in the field.
 
 			*/
